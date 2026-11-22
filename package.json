@@ -1,0 +1,15 @@
+{
+  "name": "om-sai",
+  "version": "1.0.0",
+  "description": "Om Sai shop app: stock, sales, rate compare with price-rise alerts, voice assistant, staff logins, backup/restore. Single-file web app served by a tiny Node server.",
+  "private": true,
+  "main": "server.js",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "check": "node -e \"const s=require('fs').readFileSync('index.html','utf8');const m=[...s.matchAll(/<script>([\\s\\S]*?)<\\/script>/g)].pop()[1];new Function(m);console.log('index.html script: syntax OK')\"",
+    "test": "python3 tests/run_all.py"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
